@@ -15,16 +15,10 @@ class SuperadminSeeder extends Seeder
      * @return void
      */
     public function run() {
-        $existingSuperadmin = DB::table('users')
-            ->where('name', 'superadmin')
-            ->get();
-
-        if(!is_null($existingSuperadmin)) {
-            DB::table('users')->insert([
-                'name' => 'superadmin',
-                'email' => 'superadmin@gmail.com',
-                'password' => Hash::make('password'),
-            ]);
-        }
+        DB::table('users')->insert([
+            'name' => 'superadmin',
+            'email' => 'superadmin@gmail.com',
+            'password' => Hash::make('password'),
+        ]);
     }
 }

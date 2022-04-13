@@ -1,1 +1,1 @@
-web: sail up && php artisan migrate && php artisan db:seed
+web: docker-compose up && php artisan migrate && php artisan db:seed

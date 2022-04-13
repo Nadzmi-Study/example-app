@@ -1,1 +1,1 @@
-web: docker-compose up && php artisan migrate && php artisan db:seed
+web: php artisan migrate && php artisan db:seed && vendor/bin/heroku-php-apache2 public/

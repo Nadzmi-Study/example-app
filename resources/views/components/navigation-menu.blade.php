@@ -1,10 +1,16 @@
-<div>
-    <a href="{{ url('/') }}">Home</a>
+<ul class="nav">
+    <a class="nav-link" href="{{ url('/') }}">Home</a>
 
     @if ($isLoggedIn)
-        <a href="{{ url('/user') }}">Profile</a>
-        <a href="{{ url('/logout') }}">Logout</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user') }}">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
+        </li>
     @else
-        <a href="{{ url('/login') }}">Login</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('/login') }}">Login</a>
+        </li>
     @endif
-</div>
+</ul>

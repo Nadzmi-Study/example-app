@@ -22,7 +22,7 @@ Route::get('/', [AppController::class, 'index'])->name('index');
 // Auth
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/logout', [AuthController::class, 'logout']);
 
 // User
 Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('auth');

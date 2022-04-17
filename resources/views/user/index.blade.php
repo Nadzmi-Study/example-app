@@ -21,11 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-        <h1>Welcome back, {{ $userName }}</h1>
+        <x-navigation-menu />
 
-        <form method="POST" action="/logout">
-            @csrf
-            <button type="submit">Logout</button>
-        </form>
+        <h1>Welcome back, {{ $userName }}</h1>
     </body>
 </html>

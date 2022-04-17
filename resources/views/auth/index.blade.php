@@ -21,6 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
+        <x-navigation-menu />
+
         <form method="POST" action="{{ url('/login') }}">
             @csrf
             <input name="email" type="email" placeholder="email" />

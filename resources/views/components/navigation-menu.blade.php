@@ -1,5 +1,7 @@
-<ul class="nav">
-    <a class="nav-link" href="{{ url('/') }}">Home</a>
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/') }}">Home</a>
+    </li>
 
     @if ($isLoggedIn)
         <li class="nav-item">

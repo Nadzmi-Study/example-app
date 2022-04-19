@@ -2,6 +2,9 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/') }}">Home</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/pdf') }}">PDF</a>
+    </li>
 
     @if ($isLoggedIn)
         <li class="nav-item">

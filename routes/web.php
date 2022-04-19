@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PdfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,7 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 // User
 Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('auth');
+
+// PDF
+Route::get('/pdf', [PdfController::class, 'index']);
+Route::get('/download-pdf', [PdfController::class, 'downloadPdf']);

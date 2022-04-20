@@ -117,38 +117,68 @@
         <div class="container">
             <!-- header -->
             <header>
-                <!-- uitm header -->
-                <div class="uitm-header">
-                    <div style="
-                        background-color: #434a5d;
-                        color: white;
-                        width: 565px;
-                        font-size: x-small;">
-                        <p id="uitm-website">www.uitm.edu.my</p>
-                    </div>
-                    <div style="background-color: #895079; width: 229px; margin-left: -5px;"></div>
-                </div>
+                <table style="
+                    width: 100%
+                    table-layout: auto;
+                    padding: 0px;
+                    border-collapse: collapse;">
 
-                <br />
+                    <!-- uitm header -->
+                    <tr>
+                        <td style="
+                            background-color: rgb(51, 53, 71);
+                            position: relative;
+                            padding: 0px;
+                            margin: 0px;
+                            height: 30px;">
+                            <div style="
+                                color: white;
+                                float: right;
+                                position: absolute;
+                                bottom: 0px;
+                                padding-right: 70px;
+                                font-size: x-small;
+                                font-family: serif;">
+                                www.uitm.edu.my
+                            </div>
+                        </td>
+                        <td style="
+                            background-color: rgb(99, 45, 99);
+                            width: 250px;
+                            padding: 0px;
+                            margin: 0px;
+                            height: 30px;"></td>
+                    </tr>
 
-                <!-- department info -->
-                <div class="department-info-header">
-                    <div class="simple-border">
-                        <img src="{{ asset('icons/uitm-logo-1.png') }}" width="124" height="70" />
-                    </div>
-                    <div style="
-                        width: 1px;
-                        height: 70px;
-                        background-color: black;"></div>
-                    <div class="simple-border san-serif">
-                        <b>Unit Jualan</b><br />
-                        <b>Nombor Pendaftaran Khas</b><br />
-                        <b>Kenderaan UiTM</b>
-                    </div>
-                </div>
+                    <br />
+
+                    <!-- department info -->
+                    <tr>
+                        <td style="position: relative;">
+                            <div style="
+                                text-align: right;
+                                padding-right: 5px;
+                                border-right: 2px solid black;">
+                                <img src="https://logos-download.com/wp-content/uploads/2017/11/UiTM_Universiti_Teknologi_MARA_logo.png" width="150" height="60" />
+                            </div>
+                        </td>
+                        <td style="position: relative;">
+                            <div style="
+                                font-family: serif;
+                                font-size: x-small;
+                                position: absolute;
+                                top: 0px;
+                                padding-left: 5px">
+                                <span style="color: rgb(99, 45, 99)"><b>Unit Jualan</b></span><br />
+                                <b>Nombor Pendaftaran Khas</b><br />
+                                <b>Kenderaan UiTM</b>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </header>
 
-            <br /><br />
+            <br /><br /><br />
 
             <!-- content -->
             <div class="content">

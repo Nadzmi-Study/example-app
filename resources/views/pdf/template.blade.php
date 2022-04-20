@@ -25,7 +25,7 @@
             }
 
             header {
-                border: 1px solid green;
+                /* border: 1px solid green; */
             }
 
             .content {
@@ -47,7 +47,12 @@
                 height: 30px;
                 vertical-align: top;
                 display: inline-block;
-                /* border: 1px solid blue; */
+            }
+            #uitm-website {
+                float: right;
+                margin-right: 50px;
+                /* vertical-align: bottom; */
+                border: 1px solid blue;
             }
 
             .department-info-header {
@@ -117,11 +122,11 @@
                     <div style="
                         background-color: #434a5d;
                         color: white;
-                        width: 500px;
-                        font-size: xx-small;">
-                        www.uitm.edu.my
+                        width: 565px;
+                        font-size: x-small;">
+                        <p id="uitm-website">www.uitm.edu.my</p>
                     </div>
-                    <div style="background-color: #895079; width: 285px;"></div>
+                    <div style="background-color: #895079; width: 229px; margin-left: -5px;"></div>
                 </div>
 
                 <br />
@@ -143,7 +148,7 @@
                 </div>
             </header>
 
-            <br />
+            <br /><br />
 
             <!-- content -->
             <div class="content">

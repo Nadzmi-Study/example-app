@@ -16,6 +16,7 @@
                 page-break-after: always;
             }
 
+            /* TODO: remove this style before deploy */
             img {
                 border: 1px solid black;
             }
@@ -36,34 +37,8 @@
             footer {
                 position: absolute;
                 bottom: 0;
-                width: 792px;
-                border: 1px solid green;
-            }
-
-            .uitm-header {
-                /* border: 1px solid red; */
-            }
-            .uitm-header div {
-                height: 30px;
-                vertical-align: top;
-                display: inline-block;
-            }
-            #uitm-website {
-                float: right;
-                margin-right: 50px;
-                /* vertical-align: bottom; */
-                border: 1px solid blue;
-            }
-
-            .department-info-header {
-                padding-left: 420px;
-                border: 1px solid red;
-            }
-            .department-info-header div {
-                display: inline-block;
-                vertical-align: top;
-                margin: 0 3px;
-                border: 1px solid blue;
+                width: 100%;
+                /* border: 1px solid green; */
             }
 
             .letter-info {
@@ -87,30 +62,6 @@
             .letter-content p {
                 border: 1px solid blue;
             }
-
-            .department-info-footer {
-                padding: 0 80px;
-                border: 1px solid red;
-            }
-            .department-info-footer div {
-                display: inline-block;
-                vertical-align: top;
-                margin: 0 3px;
-                border: 1px solid blue;
-            }
-
-            .department-address {
-                font-family: serif;
-                font-size: x-small;
-            }
-
-            .reference {
-                padding: 100px 95px;
-                border: 1px solid red;
-            }
-            .reference p, .reference ol {
-                border: 1px solid blue;
-            }
         </style>
     </head>
     <body>
@@ -118,7 +69,7 @@
             <!-- header -->
             <header>
                 <table style="
-                    width: 100%
+                    width: 100%;
                     table-layout: auto;
                     padding: 0px;
                     border-collapse: collapse;">
@@ -154,20 +105,18 @@
 
                     <!-- department info -->
                     <tr>
-                        <td style="position: relative;">
+                        <td style="vertical-align: top;">
                             <div style="
                                 text-align: right;
                                 padding-right: 5px;
-                                border-right: 2px solid black;">
-                                <img src="https://logos-download.com/wp-content/uploads/2017/11/UiTM_Universiti_Teknologi_MARA_logo.png" width="150" height="60" />
+                                border-right: medium solid black;">
+                                <img src="http://cdn.onlinewebfonts.com/svg/img_491006.png" width="150" height="60" />
                             </div>
                         </td>
-                        <td style="position: relative;">
+                        <td style="vertical-align: top;">
                             <div style="
                                 font-family: serif;
                                 font-size: x-small;
-                                position: absolute;
-                                top: 0px;
                                 padding-left: 5px">
                                 <span style="color: rgb(99, 45, 99)"><b>Unit Jualan</b></span><br />
                                 <b>Nombor Pendaftaran Khas</b><br />
@@ -221,7 +170,7 @@
                 <div class="letter-content">
                     <p>Tuan/Puan</p>
 
-                    <p><b>KEPUTUSAN TEMPAHAN NOMBOR PENDAFTARAN NO. SIRI UITM 28</b></p>
+                    <p><b>KEPUTUSAN TEMPAHAN NOMBOR PENDAFTARAN NO. SIRI UITM {{ $seriesNo }}</b></p>
 
                     <p>Dengan hormatnya saya diarah merujuk kepada perkara diatas.</p>
 
@@ -248,34 +197,49 @@
 
             <!-- footer -->
             <footer>
-                <div class="department-info-footer">
-                    <div>
-                        <img src="http://cdn.onlinewebfonts.com/svg/img_491006.png" alt="test" width="107" height="60" />
-                    </div>
-                    <div class="department-address">
-                        <b>Unit Jualan Nombor Pendaftaran Khas Kenderaan UiTM</b><br />
-                        Universiti teknologi MARA<br />
-                        Jabatan Pengurusan Perolehan dan Aset<br />
-                        Pejabat bendahari<br />
-                        40450 Shah Alam, Selangor, MALAYSIA<br />
-                        Tel: (+603) 5544 3345<br />
-                        E-mel: <i>uitmbid@uitm.edu.my</i>
-                    </div>
-                    <div style="
-                        width: 1px;
-                        height: 60px;
-                        background-color: black;"></div>
-                    <div>
-                        <img src="http://cdn.onlinewebfonts.com/svg/img_491006.png" width="107" height="60" />
-                    </div>
+                <div style="
+                    margin: 0 95px;
+                    padding: 0 20px;">
+                    <table style="
+                        table-layout: auto;
+                        padding: 0px;
+                        border-collapse: collapse;">
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <div style="padding-right: 5px;">
+                                    <img src="http://cdn.onlinewebfonts.com/svg/img_491006.png" width="107" height="60" />
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <div style="
+                                    font-family: serif;
+                                    font-size: x-small;
+                                    padding: 0 5px;
+                                    border-right: medium solid black;">
+                                    <b>Unit Jualan Nombor Pendaftaran Khas Kenderaan UiTM</b><br />
+                                    Universiti teknologi MARA<br />
+                                    Jabatan Pengurusan Perolehan dan Aset<br />
+                                    Pejabat Bendahari<br />
+                                    40450 Shah Alam, Selangor, MALAYSIA<br />
+                                    Tel: (+603) 5544 3345<br />
+                                    E-mel: <i>uitmbid@uitm.edu.my</i>
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <div style="padding-left: 5px;">
+                                    <img src="http://johor.uitm.edu.my/images/segamat/KORPORAT/logo/uitmdihatiku.png" width="107" height="30" /><br />
+                                    <img src="http://johor.uitm.edu.my/images/segamat/KORPORAT/logo/uitmdihatiku.png" width="107" height="30" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-
                 <br />
             </footer>
 
             <div class="page-break"></div>
 
-            <div class="reference">
+            <div style="padding: 100px 95px;">
                 <p>s.k :</p>
                 <ol>
                     <li>

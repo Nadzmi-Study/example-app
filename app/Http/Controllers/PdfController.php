@@ -16,6 +16,7 @@ class PdfController extends Controller {
             [
                 'letterSeriesNo' => 'UITM-0404 (M)',
                 'letterDate' => '4 Februari 2022',
+                'seriesNo' => 28,
                 'buyerIc' => '950811026191',
                 'buyerName' => 'MUHAMMAD NADZMI BIN MOHAMED IDZHAM',
                 'price' => '10,000.00',

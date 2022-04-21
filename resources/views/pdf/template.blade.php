@@ -31,7 +31,7 @@
 
             .content {
                 padding: 0 95px;
-                border: 1px solid green;
+                /* border: 1px solid green; */
             }
 
             footer {
@@ -41,27 +41,12 @@
                 /* border: 1px solid green; */
             }
 
-            .letter-info {
-                padding-left: 400px;
+            /* .letter-content {
                 border: 1px solid red;
             }
-            .letter-info table {
+            .letter-content p, .letter-content div {
                 border: 1px solid blue;
-            }
-
-            .buyer-info {
-                border: 1px solid red;
-            }
-            .buyer-info table {
-                border: 1px solid blue;
-            }
-
-            .letter-content {
-                border: 1px solid red;
-            }
-            .letter-content p {
-                border: 1px solid blue;
-            }
+            } */
         </style>
     </head>
     <body>
@@ -132,16 +117,16 @@
             <!-- content -->
             <div class="content">
                 <!-- letter info -->
-                <div class="letter-info">
+                <div style="padding-left: 350px;">
                     <table>
                         <tr>
                             <td><b>No. Siri</b></td>
-                            <td><b>:</b></td>
+                            <td style="padding: 0 30px"><b>:</b></td>
                             <td><b>{{ $letterSeriesNo }}</b></td>
                         </tr>
                         <tr>
                             <td>Tarikh</td>
-                            <td>:</td>
+                            <td style="padding: 0 30px">:</td>
                             <td>{{ $letterDate }}</td>
                         </tr>
                     </table>
@@ -150,7 +135,7 @@
                 <br />
 
                 <!-- buyer info -->
-                <div class="buyer-info">
+                <div>
                     <table>
                         <tr>
                             <td>No K/P</td>
@@ -178,7 +163,10 @@
                     <p>3.&#009;Tuan/puan hendaklah mendaftarkan kenderaan di Pejabat <b>Jabatan Pengangkutan Jalan (JPJ) Wangsa Maju, Kuala Lumpur atau Jabatan Pengangkutan Jalan (JPJ) Padang jawa, Shah Alam</b> selewat-lewatnya sebelum atau pada <b>{{ $expiryDate }}</b>. jika nombor pendaftaran tersebut gagal didaftarkan dalam tempoh yang ditetapkan maka nombor pendaftaran tersebut akan ditarik balik dan bayaran yang telah dijelaskan tidak akan dikembalikan.</p>
                     <p>4.&#009;Sila kemukakan surat ini semasa tuan/puan membuat urusan pendaftaran kenderaan di Pejabat Jabatan Pengangkutan Jalan (JPJ).</p>
 
+
+                    <br />
                     <p>Sekian, terima kasih.</p>
+                    <br />
 
                     <p>
                         <b>"WAWASAN KEMAKMURAN BERSAMA 2030"</b>
@@ -187,8 +175,10 @@
                     </p>
 
                     <p>
-                        Saya yang menjalankan amanah,<br />
-                        <img src="http://cdn.onlinewebfonts.com/svg/img_491006.png" width="124" height="70" /><br />
+                        Saya yang menjalankan amanah,
+                        <div style="padding-left: 50px;">
+                            <img src="http://cdn.onlinewebfonts.com/svg/img_491006.png" width="124" height="70" />
+                        </div>
                         <b>WAN HASMADI BIN WAN MOHAMED</b><br />
                         Ketua Timbalan Bendahari
                     </p>

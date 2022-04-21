@@ -95,7 +95,7 @@
                         </td>
                         <td style="
                             background-color: rgb(99, 45, 99);
-                            width: 250px;
+                            width: 200px;
                             padding: 0px;
                             margin: 0px;
                             height: 30px;"></td>

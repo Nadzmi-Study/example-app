@@ -71,7 +71,7 @@
                                 color: white;
                                 float: right;
                                 position: absolute;
-                                bottom: 0px;
+                                bottom: 5px;
                                 padding-right: 70px;
                                 font-size: x-small;
                                 font-family: serif;">
@@ -80,7 +80,7 @@
                         </td>
                         <td style="
                             background-color: rgb(99, 45, 99);
-                            width: 200px;
+                            width: 210px;
                             padding: 0px;
                             margin: 0px;
                             height: 30px;"></td>
@@ -101,7 +101,7 @@
                         <td style="vertical-align: top;">
                             <div style="
                                 font-family: serif;
-                                font-size: x-small;
+                                font-size: small;
                                 padding-left: 5px">
                                 <span style="color: rgb(99, 45, 99)"><b>Unit Jualan</b></span><br />
                                 <b>Nombor Pendaftaran Khas</b><br />

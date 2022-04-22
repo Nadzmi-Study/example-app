@@ -140,12 +140,12 @@
                         <tr>
                             <td>No K/P</td>
                             <td>:</td>
-                            <td><b>{{ $buyerIc }}</b></td>
+                            <td><b>{{ $buyerName }}</b></td>
                         </tr>
                         <tr>
                             <td>Nama</td>
                             <td>:</td>
-                            <td><b>{{ $buyerName }}</b></td>
+                            <td><b>{{ $buyerAddress }}</b></td>
                         </tr>
                     </table>
                 </div>
@@ -155,12 +155,12 @@
                 <div class="letter-content">
                     <p>Tuan/Puan</p>
 
-                    <p><b>KEPUTUSAN TEMPAHAN NOMBOR PENDAFTARAN NO. SIRI UITM {{ $seriesNo }}</b></p>
+                    <p><b>KEPUTUSAN TEMPAHAN NOMBOR PENDAFTARAN NO. SIRI UITM</b></p>
 
                     <p>Dengan hormatnya saya diarah merujuk kepada perkara diatas.</p>
 
-                    <p>2.&#009;Sukacita dimaklumkan bahawa Unit Jualan nombor Pendaftaran Khas Kenderaan, universiti Teknologi MARA bersetuju meluluskan nombor pendaftaran tersebut kepada tuan/puan dengan harga <b>RM {{ $price }}</b>.</p>
-                    <p>3.&#009;Tuan/puan hendaklah mendaftarkan kenderaan di Pejabat <b>Jabatan Pengangkutan Jalan (JPJ) Wangsa Maju, Kuala Lumpur atau Jabatan Pengangkutan Jalan (JPJ) Padang jawa, Shah Alam</b> selewat-lewatnya sebelum atau pada <b>{{ $expiryDate }}</b>. jika nombor pendaftaran tersebut gagal didaftarkan dalam tempoh yang ditetapkan maka nombor pendaftaran tersebut akan ditarik balik dan bayaran yang telah dijelaskan tidak akan dikembalikan.</p>
+                    <p>2.&#009;Sukacita dimaklumkan bahawa Unit Jualan nombor Pendaftaran Khas Kenderaan, universiti Teknologi MARA bersetuju meluluskan nombor pendaftaran tersebut kepada tuan/puan dengan harga <b>RM {{ $totalPrice }}</b>.</p>
+                    <p>3.&#009;Tuan/puan hendaklah mendaftarkan kenderaan di Pejabat <b>Jabatan Pengangkutan Jalan (JPJ) Wangsa Maju, Kuala Lumpur atau Jabatan Pengangkutan Jalan (JPJ) Padang jawa, Shah Alam</b> selewat-lewatnya sebelum atau pada. jika nombor pendaftaran tersebut gagal didaftarkan dalam tempoh yang ditetapkan maka nombor pendaftaran tersebut akan ditarik balik dan bayaran yang telah dijelaskan tidak akan dikembalikan.</p>
                     <p>4.&#009;Sila kemukakan surat ini semasa tuan/puan membuat urusan pendaftaran kenderaan di Pejabat Jabatan Pengangkutan Jalan (JPJ).</p>
 
 

@@ -15,5 +15,6 @@
         <button type="submit">Download PDF</button>
     </form> --}}
 
-    <a href="{{ url('/download-pdf') }}">Download PDF</a>
+    <a href="{{ url('/download-tempahan-pdf') }}">Download Tempahan PDF</a>
+    <a href="{{ url('/download-keputusan-pdf') }}">Download Keputusan PDF</a>
 @endsection

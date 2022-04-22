@@ -30,4 +30,5 @@ Route::get('/user', [UserController::class, 'index'])->name('user')->middleware(
 
 // PDF
 Route::get('/pdf', [PdfController::class, 'index']);
-Route::get('/download-pdf', [PdfController::class, 'downloadPdf']);
+Route::get('/download-tempahan-pdf', [PdfController::class, 'downloadTempahanPdf']);
+Route::get('/download-keputusan-pdf', [PdfController::class, 'downloadKeputusanPdf']);

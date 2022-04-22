@@ -10,20 +10,41 @@ class PdfController extends Controller {
         return view('pdf.index');
     }
 
-    public function downloadPdf(Request $request) {
+    public function downloadTempahanPdf(Request $request) {
         $pdf = PDF::loadView(
-            'pdf.template',
+            'pdf.tempahan-template',
             [
                 'letterSeriesNo' => 'UITM-0404 (M)',
                 'letterDate' => '4 Februari 2022',
-                'seriesNo' => 28,
                 'buyerIc' => '950811026191',
                 'buyerName' => 'MUHAMMAD NADZMI BIN MOHAMED IDZHAM',
-                'price' => '10,000.00',
+                'seriesNo' => 28,
+                'price' => 'RM 10,000.00',
                 'expiryDate' => '30 November 2022',
             ]
         );
 
-        return $pdf->download('sample.pdf');
+        return $pdf->download('tempahan.pdf');
+    }
+
+    public function downloadKeputusanPdf(Request $request) {
+        $pdf = PDF::loadView(
+            'pdf.keputusan-template',
+            [
+                'letterSeriesNo' => 'UITM-0404 (M)',
+                'letterDate' => '4 Februari 2022',
+                'buyerName' => 'MUHAMMAD NADZMI BIN MOHAMED IDZHAM',
+                'buyerAddress' => 'some address',
+                'plate' => [
+                    [
+                        'plateNo' => 'UITM 92',
+                        'price' => 'RM 10,000.00',
+                    ],
+                ],
+                'totalPrice' => 'RM 10,000.00',
+            ]
+        );
+
+        return $pdf->download('keputusan.pdf');
     }
 }

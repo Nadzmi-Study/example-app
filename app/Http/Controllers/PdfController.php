@@ -37,7 +37,7 @@ class PdfController extends Controller {
                 'buyerAddress' => nl2br("No. Lot Pt 1511, Kampung Tekah\nAsam Kumbang\n340000 TAIPING"),
                 'plateNo' => 'UITM 92',
                 'price' => '10,000.00',
-                'totalPrice' => 'RM 10,000.00',
+                'totalPrice' => '10,000.00',
             ]
         );
 

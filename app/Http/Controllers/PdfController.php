@@ -31,16 +31,14 @@ class PdfController extends Controller {
         $pdf = PDF::loadView(
             'pdf.keputusan-template',
             [
-                'letterSeriesNo' => 'UITM-0404 (M)',
-                'letterDate' => '4 Februari 2022',
-                'buyerName' => 'MUHAMMAD NADZMI BIN MOHAMED IDZHAM',
-                'buyerAddress' => 'some address',
-                'plate' => [
-                    [
-                        'plateNo' => 'UITM 92',
-                        'price' => 'RM 10,000.00',
-                    ],
-                ],
+                'letterSeriesNo' => '400-BBI (KK9/1/2)',
+                'letterDate' => '25 Januari 2022',
+                'buyerName' => 'Mohamad Amirul Yusri Bin Mohd Yusof',
+                'buyerAddress' => "No. Lot Pt 1511, Kampung Tekah
+                Asam Kumbang
+                340000 TAIPING",
+                'plateNo' => 'UITM 92',
+                'price' => '10,000.00',
                 'totalPrice' => 'RM 10,000.00',
             ]
         );

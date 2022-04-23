@@ -103,9 +103,8 @@
                                 font-family: serif;
                                 font-size: small;
                                 padding-left: 5px">
-                                <span style="color: rgb(99, 45, 99)"><b>Unit Jualan</b></span><br />
-                                <b>Nombor Pendaftaran Khas</b><br />
-                                <b>Kenderaan UiTM</b>
+                                <span style="color: rgb(99, 45, 99)"><b>Pejabat</b></span><br />
+                                <b>Bendahari</b>
                             </div>
                         </td>
                     </tr>
@@ -187,32 +186,23 @@
 
             <!-- footer -->
             <footer>
-                <div style="
-                    margin: 0 95px;
-                    padding: 0 20px;">
+                <div style="padding-left: 250px;">
                     <table style="
                         table-layout: auto;
                         padding: 0px;
                         border-collapse: collapse;">
                         <tr>
                             <td style="vertical-align: top;">
-                                <div style="padding-right: 5px;">
-                                    <img src="http://cdn.onlinewebfonts.com/svg/img_491006.png" width="107" height="60" />
-                                </div>
-                            </td>
-                            <td style="vertical-align: top;">
                                 <div style="
                                     font-family: serif;
                                     font-size: x-small;
                                     padding: 0 5px;
                                     border-right: medium solid black;">
-                                    <b>Unit Jualan Nombor Pendaftaran Khas Kenderaan UiTM</b><br />
-                                    Universiti teknologi MARA<br />
-                                    Jabatan Pengurusan Perolehan dan Aset<br />
-                                    Pejabat Bendahari<br />
+                                    <b>Universityi Teknologi MARA</b><br />
+                                    Aras 3, Bangunan Canseleri Tuanku Syed Sirajuddin<br />
                                     40450 Shah Alam, Selangor, MALAYSIA<br />
-                                    Tel: (+603) 5544 3345<br />
-                                    E-mel: <i>uitmbid@uitm.edu.my</i>
+                                    Tel: (+603) 5544 2277 Faks: (+603) 5544 3302<br />
+                                    Emel: <i>bendahari@salam.uitm.edu.my</i>
                                 </div>
                             </td>
                             <td style="vertical-align: top;">
@@ -226,33 +216,6 @@
                 </div>
                 <br />
             </footer>
-
-            <div class="page-break"></div>
-
-            <div style="padding: 100px 95px;">
-                <p>s.k :</p>
-                <ol>
-                    <li>
-                        <p>
-                            Pengarah<br />
-                            Jabatan Pengangkutan Jalan<br />
-                            Negeri Selangor<br />
-                            Jalan Padang Jawa<br />
-                            Seksyen 16<br />
-                            <b>40620 SHAH ALAM, SELANGOR</b>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Pengarah<br />
-                            Jabatan Pengangkutan Jalan<br />
-                            Wilayah Persekutuan Kuala Lumpur<br />
-                            Lot 14264 Jalan genting Klang<br />
-                            <b>53300 SETAPAK, KUALA LUMPUR</b>
-                        </p>
-                    </li>
-                </ol>
-            </div>
         </div>
     </body>
 </html>

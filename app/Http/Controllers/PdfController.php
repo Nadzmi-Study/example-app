@@ -34,9 +34,7 @@ class PdfController extends Controller {
                 'letterSeriesNo' => '400-BBI (KK9/1/2)',
                 'letterDate' => '25 Januari 2022',
                 'buyerName' => 'Mohamad Amirul Yusri Bin Mohd Yusof',
-                'buyerAddress' => "No. Lot Pt 1511, Kampung Tekah
-                Asam Kumbang
-                340000 TAIPING",
+                'buyerAddress' => nl2br("No. Lot Pt 1511, Kampung Tekah\nAsam Kumbang\n340000 TAIPING"),
                 'plateNo' => 'UITM 92',
                 'price' => '10,000.00',
                 'totalPrice' => 'RM 10,000.00',

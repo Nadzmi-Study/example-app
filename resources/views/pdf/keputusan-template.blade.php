@@ -135,18 +135,10 @@
 
                 <!-- buyer info -->
                 <div>
-                    <table>
-                        <tr>
-                            <td>No K/P</td>
-                            <td>:</td>
-                            <td><b>{{ $buyerName }}</b></td>
-                        </tr>
-                        <tr>
-                            <td>Nama</td>
-                            <td>:</td>
-                            <td><b>{{ $buyerAddress }}</b></td>
-                        </tr>
-                    </table>
+                    <p>
+                        {{ $buyerName }}<br />
+                        {!! $buyerAddress !!}
+                    </p>
                 </div>
 
                 <br />

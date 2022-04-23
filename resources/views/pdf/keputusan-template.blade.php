@@ -119,13 +119,13 @@
                 <div style="padding-left: 350px;">
                     <table>
                         <tr>
-                            <td><b>No. Siri</b></td>
-                            <td style="padding: 0 30px"><b>:</b></td>
-                            <td><b>{{ $letterSeriesNo }}</b></td>
+                            <td>Surat Kami</td>
+                            <td style="padding: 0 20px">:</td>
+                            <td>{{ $letterSeriesNo }}</td>
                         </tr>
                         <tr>
                             <td>Tarikh</td>
-                            <td style="padding: 0 30px">:</td>
+                            <td style="padding: 0 20px">:</td>
                             <td>{{ $letterDate }}</td>
                         </tr>
                     </table>

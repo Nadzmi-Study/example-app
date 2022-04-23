@@ -163,7 +163,7 @@
                     <table class="price-table">
                         <thead>
                             <tr>
-                                <th style="width: 10%;">BIL</th>
+                                <th style="width: 30px;">BIL</th>
                                 <th>NOMBOR PLAT UiTM</th>
                                 <th>HARGA (RM)</th>
                             </tr>
@@ -190,7 +190,7 @@
 
                     <p>
                         <b>"WAWASAN KEMAKMURAN BERSAMA 2030"</b>
-                        <br /><br/>
+                        <br /><br />
                         <b>"BERKHIDMAT UNTUK NEGARA"</b>
                     </p>
 

@@ -16,10 +16,9 @@
                 page-break-after: always;
             }
 
-            /* TODO: remove this style before deploy */
-            img {
+            /* img {
                 border: 1px solid black;
-            }
+            } */
 
             .container {
                 position: relative;
@@ -153,7 +152,7 @@
                         @if ($buyerAddressLine2)
                             {{ $buyerAddressLine2 }}<br />
                         @endif
-                        <b>{{ $buyerAddressPostcode }} {{ $buyeraddressArea }}</b>
+                        <b>{{ $buyerAddressPostcode }} {{ $buyerAddressArea }}</b>
                     </p>
                 </div>
 
@@ -164,7 +163,6 @@
 
                     <p>Perkara di atas adalah dirujuk.</p>
 
-                    <!-- TODO: make sure got tab space on every point -->
                     <p style="text-align: justify;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sukacita dimaklumkan bahawa permohonan pembelian nombor pendaftaran khas UiTM tuan telah diluluskan oleh pihak UiTM. Nombor Pendaftaran khas UiTM yang diluluskan adalah seperti di bawah:</p>
                     <table class="price-table">
                         <thead>

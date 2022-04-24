@@ -30,5 +30,7 @@ Route::get('/user', [UserController::class, 'index'])->name('user')->middleware(
 
 // PDF
 Route::get('/pdf', [PdfController::class, 'index']);
-Route::get('/download-tempahan-pdf', [PdfController::class, 'downloadTempahanPdf']);
-Route::get('/download-keputusan-pdf', [PdfController::class, 'downloadKeputusanPdf']);
+Route::get('/pdf/reservation', [PdfController::class, 'reservationLetter']);
+Route::get('/pdf/approval', [PdfController::class, 'approvalLetter']);
+Route::post('/pdf/reservation/download', [PdfController::class, 'downloadReservationLetter']);
+Route::post('/pdf/approval/download', [PdfController::class, 'downloadApprovalLetter']);

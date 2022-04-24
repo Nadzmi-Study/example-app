@@ -10,40 +10,71 @@ class PdfController extends Controller {
         return view('pdf.index');
     }
 
-    public function downloadTempahanPdf(Request $request) {
-        $pdf = PDF::loadView(
-            'pdf.tempahan-template',
-            [
-                'letterSeriesNo' => 'UITM-0404 (M)',
-                'letterDate' => '4 Februari 2022',
-                'buyerIc' => '950811026191',
-                'buyerName' => 'MUHAMMAD NADZMI BIN MOHAMED IDZHAM',
-                'seriesNo' => 28,
-                'price' => 'RM 10,000.00',
-                'expiryDate' => '30 November 2022',
-            ]
-        );
-
-        return $pdf->download('tempahan.pdf');
+    public function reservationLetter() {
+        return view('pdf.reservation');
     }
 
-    public function downloadKeputusanPdf(Request $request) {
+    public function approvalLetter() {
+        return view('pdf.approval');
+    }
+
+    public function downloadReservationLetter(Request $request) {
+        // dd([
+        //     'seriesNo' => $request['seriesNo'],
+        //     'letterSeriesNo' => $request['letterSeriesNo'],
+        //     'letterDate' => $request['letterDate'],
+        //     'buyerIc' => $request['buyerIc'],
+        //     'buyerName' => $request['buyerName'],
+        //     'price' => number_format($request['price'], 2),
+        //     'expiryDate' => $request['expiryDate'],
+        // ]);
+
         $pdf = PDF::loadView(
-            'pdf.keputusan-template',
+            'pdf.reservation-template',
             [
-                'letterSeriesNo' => '400-BBI (KK9/1/2)',
-                'letterDate' => '25 Januari 2022',
-                'buyerName' => 'Mohamad Amirul Yusri Bin Mohd Yusof',
-                'buyerAddressLine1' => 'No. Lot Pt 1511, Kampung Tekah',
-                'buyerAddressLine2' => 'Asam Kumbang',
-                'buyerAddressPostcode' => '340000',
-                'buyeraddressArea' => 'TAIPING',
-                'plateNo' => 'UITM 92',
-                'price' => '10,000.00',
-                'totalPrice' => '10,000.00',
-            ]
+                'seriesNo' => $request['seriesNo'],
+                'letterSeriesNo' => $request['letterSeriesNo'],
+                'letterDate' => $request['letterDate'], // TODO: date format must follow template
+                'buyerIc' => $request['buyerIc'],
+                'buyerName' => $request['buyerName'],
+                'price' => number_format($request['price'], 2),
+                'expiryDate' => $request['expiryDate'], // TODO: date format must follow template
+            ],
         );
 
-        return $pdf->download('keputusan.pdf');
+        return $pdf->download('reservation.pdf');
+    }
+
+    public function downloadApprovalLetter(Request $request) {
+        // dd([
+        //     'letterSeriesNo' => $request['letterSeriesNo'],
+        //     'letterDate' => $request['letterDate'],
+        //     'buyerName' => $request['buyerName'],
+        //     'buyerAddressLine1' => $request['buyerAddressLine1'],
+        //     'buyerAddressLine2' => $request['buyerAddressLine2'],
+        //     'buyerAddressPostcode' => $request['buyerAddressPostcode'],
+        //     'buyerAddressArea' => $request['buyerAddressArea'],
+        //     'plateNo' => $request['plateNo'],
+        //     'price' => number_format($request['price'], 2),
+        //     'totalPrice' => number_format($request['price'], 2),
+        // ]);
+
+        $pdf = PDF::loadView(
+            'pdf.approval-template',
+            [
+                'letterSeriesNo' => $request['letterSeriesNo'],
+                'letterDate' => $request['letterDate'], // TODO: date format must follow template
+                'buyerName' => $request['buyerName'],
+                'buyerAddressLine1' => $request['buyerAddressLine1'],
+                'buyerAddressLine2' => $request['buyerAddressLine2'],
+                'buyerAddressPostcode' => $request['buyerAddressPostcode'],
+                'buyerAddressArea' => $request['buyerAddressArea'],
+                'plateNo' => $request['plateNo'],
+                'price' => number_format($request['price'], 2),
+                'totalPrice' => number_format($request['price'], 2),
+            ],
+        );
+
+        return $pdf->download('approval.pdf');
     }
 }

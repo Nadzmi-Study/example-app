@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LetterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,10 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 // User
 Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('auth');
+
+// PDF
+Route::get('/pdf', [LetterController::class, 'index']);
+Route::get('/pdf/reservation', [LetterController::class, 'reservationLetter']);
+Route::get('/pdf/approval', [LetterController::class, 'approvalLetter']);
+Route::post('/pdf/reservation/download', [LetterController::class, 'downloadReservationLetter']);
+Route::post('/pdf/approval/download', [LetterController::class, 'downloadApprovalLetter']);

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 
-class PdfController extends Controller {
+class LetterController extends Controller {
     public function index() {
         return view('pdf.index');
     }
@@ -28,8 +28,8 @@ class PdfController extends Controller {
         //     'price' => number_format($request['price'], 2),
         //     'expiryDate' => $request['expiryDate'],
         // ]);
-
-        $pdf = PDF::loadView(
+        
+        return PDF::loadView(
             'pdf.reservation-template',
             [
                 'seriesNo' => $request['seriesNo'],
@@ -40,9 +40,7 @@ class PdfController extends Controller {
                 'price' => number_format($request['price'], 2),
                 'expiryDate' => $request['expiryDate'], // TODO: date format must follow template
             ],
-        );
-
-        return $pdf->download('reservation.pdf');
+        )->download('reservation.pdf');
     }
 
     public function downloadApprovalLetter(Request $request) {
@@ -59,7 +57,7 @@ class PdfController extends Controller {
         //     'totalPrice' => number_format($request['price'], 2),
         // ]);
 
-        $pdf = PDF::loadView(
+        return PDF::loadView(
             'pdf.approval-template',
             [
                 'letterSeriesNo' => $request['letterSeriesNo'],
@@ -73,8 +71,6 @@ class PdfController extends Controller {
                 'price' => number_format($request['price'], 2),
                 'totalPrice' => number_format($request['price'], 2),
             ],
-        );
-
-        return $pdf->download('approval.pdf');
+        )->download('approval.pdf');
     }
 }

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PdfController;
+use App\Http\Controllers\LetterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +29,8 @@ Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('auth');
 
 // PDF
-Route::get('/pdf', [PdfController::class, 'index']);
-Route::get('/pdf/reservation', [PdfController::class, 'reservationLetter']);
-Route::get('/pdf/approval', [PdfController::class, 'approvalLetter']);
-Route::post('/pdf/reservation/download', [PdfController::class, 'downloadReservationLetter']);
-Route::post('/pdf/approval/download', [PdfController::class, 'downloadApprovalLetter']);
+Route::get('/pdf', [LetterController::class, 'index']);
+Route::get('/pdf/reservation', [LetterController::class, 'reservationLetter']);
+Route::get('/pdf/approval', [LetterController::class, 'approvalLetter']);
+Route::post('/pdf/reservation/download', [LetterController::class, 'downloadReservationLetter']);
+Route::post('/pdf/approval/download', [LetterController::class, 'downloadApprovalLetter']);

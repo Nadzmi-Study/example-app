@@ -147,7 +147,13 @@
                 <div>
                     <p>
                         {{ $buyerName }}<br />
-                        {!! $buyerAddress !!}
+                        @if ($buyerAddressLine1)
+                            {{ $buyerAddressLine1 }}<br />
+                        @endif
+                        @if ($buyerAddressLine2)
+                            {{ $buyerAddressLine2 }}<br />
+                        @endif
+                        <b>{{ $buyerAddressPostcode }} {{ $buyeraddressArea }}</b>
                     </p>
                 </div>
 
@@ -159,7 +165,7 @@
                     <p>Perkara di atas adalah dirujuk.</p>
 
                     <!-- TODO: make sure got tab space on every point -->
-                    <p style="text-align: justify;">2.&#009;Sukacita dimaklumkan bahawa permohonan pembelian nombor pendaftaran khas UiTM tuan telah diluluskan oleh pihak UiTM. Nombor Pendaftaran khas UiTM yang diluluskan adalah seperti di bawah:</p>
+                    <p style="text-align: justify;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sukacita dimaklumkan bahawa permohonan pembelian nombor pendaftaran khas UiTM tuan telah diluluskan oleh pihak UiTM. Nombor Pendaftaran khas UiTM yang diluluskan adalah seperti di bawah:</p>
                     <table class="price-table">
                         <thead>
                             <tr>
@@ -179,8 +185,8 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p style="text-align: justify;">3.&#009;Pembayaran hendaklah dibuat melalui akaun <b>Bank Islam Malaysia berhad (BIMB) No Akaun : 1217 7010 0067 54</b> kepada Bendahari UiTM. Mohon pihak tuan emelkan kepada pihak kami salinan kad pengenalan dan resit bayaran.</p>
-                    <p style="text-align: justify;">4.&#009;Sekiranya terdapat sebarang pertanyaan sila hubungi pihak kami di talian 03-55443345 / 03-55443395 atau emel kepada uitmbid_admin1@uitm.edu.my untuk keterangan lanjut.</p>
+                    <p style="text-align: justify;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pembayaran hendaklah dibuat melalui akaun <b>Bank Islam Malaysia berhad (BIMB) No Akaun : 1217 7010 0067 54</b> kepada Bendahari UiTM. Mohon pihak tuan emelkan kepada pihak kami salinan kad pengenalan dan resit bayaran.</p>
+                    <p style="text-align: justify;">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sekiranya terdapat sebarang pertanyaan sila hubungi pihak kami di talian 03-55443345 / 03-55443395 atau emel kepada uitmbid_admin1@uitm.edu.my untuk keterangan lanjut.</p>
 
                     <br />
 

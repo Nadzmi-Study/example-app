@@ -19,49 +19,26 @@ class LetterController extends Controller {
     }
 
     public function downloadReservationLetter(Request $request) {
-        // dd([
-        //     'seriesNo' => $request['seriesNo'],
-        //     'letterSeriesNo' => $request['letterSeriesNo'],
-        //     'letterDate' => $request['letterDate'],
-        //     'buyerIc' => $request['buyerIc'],
-        //     'buyerName' => $request['buyerName'],
-        //     'price' => number_format($request['price'], 2),
-        //     'expiryDate' => $request['expiryDate'],
-        // ]);
-        
         return PDF::loadView(
             'pdf.reservation-template',
             [
                 'seriesNo' => $request['seriesNo'],
                 'letterSeriesNo' => $request['letterSeriesNo'],
-                'letterDate' => $request['letterDate'], // TODO: date format must follow template
+                'letterDate' => $this->generateDate($request['letterDate']),
                 'buyerIc' => $request['buyerIc'],
                 'buyerName' => $request['buyerName'],
                 'price' => number_format($request['price'], 2),
-                'expiryDate' => $request['expiryDate'], // TODO: date format must follow template
+                'expiryDate' => $this->generateDate($request['expiryDate']),
             ],
         )->download('reservation.pdf');
     }
 
     public function downloadApprovalLetter(Request $request) {
-        // dd([
-        //     'letterSeriesNo' => $request['letterSeriesNo'],
-        //     'letterDate' => $request['letterDate'],
-        //     'buyerName' => $request['buyerName'],
-        //     'buyerAddressLine1' => $request['buyerAddressLine1'],
-        //     'buyerAddressLine2' => $request['buyerAddressLine2'],
-        //     'buyerAddressPostcode' => $request['buyerAddressPostcode'],
-        //     'buyerAddressArea' => $request['buyerAddressArea'],
-        //     'plateNo' => $request['plateNo'],
-        //     'price' => number_format($request['price'], 2),
-        //     'totalPrice' => number_format($request['price'], 2),
-        // ]);
-
         return PDF::loadView(
             'pdf.approval-template',
             [
                 'letterSeriesNo' => $request['letterSeriesNo'],
-                'letterDate' => $request['letterDate'], // TODO: date format must follow template
+                'letterDate' => $this->generateDate($request['letterDate']),
                 'buyerName' => $request['buyerName'],
                 'buyerAddressLine1' => $request['buyerAddressLine1'],
                 'buyerAddressLine2' => $request['buyerAddressLine2'],
@@ -72,5 +49,52 @@ class LetterController extends Controller {
                 'totalPrice' => number_format($request['price'], 2),
             ],
         )->download('approval.pdf');
+    }
+
+    private function generateDate(string $date) {
+        $datetime = strtotime($date);
+
+        $day = date('d', $datetime);
+        $year = date('Y', $datetime);
+        switch (date('m', $datetime)) {
+            case '01':
+                $month = 'Januari';
+                break;
+            case '02':
+                $month = 'Februari';
+                break;
+            case '03':
+                $month = 'Mac';
+                break;
+            case '04':
+                $month = 'April';
+                break;
+            case '05':
+                $month = 'Mei';
+                break;
+            case '06':
+                $month = 'Jun';
+                break;
+            case '07':
+                $month = 'Julai';
+                break;
+            case '08':
+                $month = 'Ogos';
+                break;
+            case '09':
+                $month = 'September';
+                break;
+            case '10':
+                $month = 'Oktober';
+                break;
+            case '11':
+                $month = 'November';
+                break;
+            case '12':
+                $month = 'Disember';
+                break;
+        }
+
+        return "{$day} {$month} {$year}";
     }
 }

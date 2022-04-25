@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Storage;
 
 class LetterController extends Controller {
     public function index() {
@@ -19,7 +20,9 @@ class LetterController extends Controller {
     }
 
     public function downloadReservationLetter(Request $request) {
-        return PDF::loadView(
+        $timestamp = time();
+        $pdfName = "reservation_{$request['buyerIc']}_{$request['seriesNo']}_{$timestamp}.pdf";
+        $pdf = PDF::loadView(
             'pdf.reservation-template',
             [
                 'seriesNo' => $request['seriesNo'],
@@ -30,11 +33,21 @@ class LetterController extends Controller {
                 'price' => number_format($request['price'], 2),
                 'expiryDate' => $this->generateDate($request['expiryDate']),
             ],
-        )->download('reservation.pdf');
+        );
+
+        $pdfPath = "public/letter/reservation/{$pdfName}";
+        Storage::put($pdfPath, $pdf->output());
+
+        // TODO: save file location in DB
+        // TODO: send email
+
+        return $pdf->download($pdfName);
     }
 
     public function downloadApprovalLetter(Request $request) {
-        return PDF::loadView(
+        $timestamp = time();
+        $pdfName = "approval_{$timestamp}.pdf";
+        $pdf = PDF::loadView(
             'pdf.approval-template',
             [
                 'letterSeriesNo' => $request['letterSeriesNo'],
@@ -48,7 +61,15 @@ class LetterController extends Controller {
                 'price' => number_format($request['price'], 2),
                 'totalPrice' => number_format($request['price'], 2),
             ],
-        )->download('approval.pdf');
+        );
+
+        $pdfPath = "public/letter/approval/{$pdfName}";
+        Storage::put($pdfPath, $pdf->output());
+
+        // TODO: save file location in DB
+        // TODO: send email
+
+        return $pdf->download($pdfName);
     }
 
     private function generateDate(string $date) {

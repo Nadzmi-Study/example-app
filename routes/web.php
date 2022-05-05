@@ -6,6 +6,9 @@ use App\Http\Controllers\AppController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LetterController;
+use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\ProductController;
+use App\Http\Middleware\ApiResponseMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +37,11 @@ Route::get('/pdf/reservation', [LetterController::class, 'reservationLetter']);
 Route::get('/pdf/approval', [LetterController::class, 'approvalLetter']);
 Route::post('/pdf/reservation/download', [LetterController::class, 'downloadReservationLetter']);
 Route::post('/pdf/approval/download', [LetterController::class, 'downloadApprovalLetter']);
+
+// vue testing routes
+Route::middleware(ApiResponseMiddleware::class)->group(function () {
+    Route::prefix('api')->group(function () {
+        Route::get('categories', [CategoryController::class, 'index']);
+        Route::get('products', [ProductController::class, 'index']);
+    });
+});

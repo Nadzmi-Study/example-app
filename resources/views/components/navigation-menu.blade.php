@@ -1,21 +1,64 @@
-<ul class="nav nav-pills">
-    <li class="nav-item">
-        <a class="nav-link" href="{{ url('/') }}">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ url('/pdf') }}">PDF</a>
-    </li>
+<nav class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="hidden sm:block sm:ml-6">
+                    <div class="flex space-x-4">
+                        {{-- <a href="{{ url('/') }}" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
+                            Home
+                        </a> --}}
 
-    @if ($isLoggedIn)
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url('/user') }}">Profile</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
-        </li>
-    @else
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url('/login') }}">Login</a>
-        </li>
-    @endif
-</ul>
+                        <a href="{{ url('/') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
+                            Home
+                        </a>
+                        <a href="{{ url('/pdf') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                            PDF
+                        </a>
+
+                        @if ($isLoggedIn)
+                            <a href="{{ url('/user') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                Profile
+                            </a>
+                            <a href="{{ url('/logout') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                Logout
+                            </a>
+                        @else
+                            <a href="{{ url('/login') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                Login
+                            </a>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            {{-- <a href="{{ url('/') }}" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
+                Home
+            </a> --}}
+
+            <a href="{{ url('/') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Home
+            </a>
+            <a href="{{ url('/pdf') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                PDF
+            </a>
+
+            @if ($isLoggedIn)
+                <a href="{{ url('/user') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Profile
+                </a>
+                <a href="{{ url('/logout') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Logout
+                </a>
+            @else
+                <a href="{{ url('/login') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Login
+                </a>
+            @endif
+        </div>
+    </div>
+</nav>
